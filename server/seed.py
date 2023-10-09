@@ -46,7 +46,7 @@ with app.app_context():
     for i in range(10):
      pizza = Pizza(
         name=random.choice(pizza_names),
-        ingredients= ', '.join(random.sample(random_ingredients), random.randint(1, len(random_ingredients))),  # Convert list to string
+        ingredients=', '.join(random.sample(random_ingredients, random.randint(1, len(random_ingredients)))),  # Convert list to string
         created_at=fake.date_time(),
         updated_at=fake.date_time(),
     )
